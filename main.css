@@ -161,9 +161,14 @@ body {
     vertical-align: top;
 }
 
-#links-table {
+#links-list {
     width: 100%;
     text-align: center;
+}
+
+#links-list img {
+    width: calc(100% - 30px);
+    margin: 5px 15px;
 }
 
 .page-footer {
