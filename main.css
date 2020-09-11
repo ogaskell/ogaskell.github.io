@@ -1,1 +1,24 @@
+:root { /* This is where I will define global variables, eg background, text colour etc. */
+    --colour-bg: #455a64;
+    --colour-content-bg: #fff;
+}
 
+html {
+    background-color: var(--colour-bg);
+
+    font-family: sans-serif;
+
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: var(--colour-content-bg);
+
+    width: 70vw;
+    max-width: 900px;
+
+    margin: 10px auto 10px auto;
+    padding: 30px 10px 30px 10px;
+}
