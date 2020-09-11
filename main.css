@@ -25,4 +25,22 @@ body {
 
 .main-title {
     text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.pre-title {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 300px;
+    margin-bottom: 0;
+}
+
+.title-underline {
+    border-top: dotted black 3px;
+    border-bottom: solid black 0px;
+    border-left: 0;
+    border-right: 0;
+    padding: 1px;
 }
