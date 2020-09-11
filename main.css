@@ -104,6 +104,7 @@ body {
 
 .tile h3 {
     margin-top: 0;
+    display: inline;
 }
 
 .tile-logo {
@@ -113,6 +114,23 @@ body {
 .tile-demo {
     width: calc(100% + 30px);
     margin: 5px -15px 5px -15px;
+}
+
+.tile-links {
+    padding: 0;
+    width: 24px;
+    float: right;
+}
+
+.tile-link {
+    padding: 0;
+    margin: 0;
+}
+
+.tile-link img {
+    width: 20px;
+    padding: 2px;
+    margin: 0;
 }
 
 #links {
