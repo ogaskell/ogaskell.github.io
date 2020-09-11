@@ -1,6 +1,6 @@
 :root { /* This is where I will define global variables, eg background, text colour etc. */
     --colour-bg: #455a64;
-    --colour-content-bg: #fff;
+    --colour-content-bg: rgba(255,255,255,0.5);
 
     --colour-text: #000;
     --colour-secondary-text: #888;
@@ -10,7 +10,8 @@
 }
 
 html {
-    background-color: var(--colour-bg);
+    background: url("images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 
     font-family: sans-serif;
 
