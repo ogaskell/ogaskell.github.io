@@ -1,6 +1,12 @@
 :root { /* This is where I will define global variables, eg background, text colour etc. */
     --colour-bg: #455a64;
     --colour-content-bg: #fff;
+
+    --colour-text: #000;
+    --colour-secondary-text: #888;
+
+    --colour-link: #449;
+    --colour-secondary-link: #778;
 }
 
 html {
@@ -43,4 +49,20 @@ body {
     border-left: 0;
     border-right: 0;
     padding: 1px;
+}
+
+.page-footer {
+    color: var(--colour-secondary-text);
+
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+.page-footer * {
+    margin: 2px;
+}
+
+.page-footer a {
+    color: var(--colour-secondary-link);
 }
