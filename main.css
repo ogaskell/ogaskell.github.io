@@ -22,3 +22,7 @@ body {
     margin: 10px auto 10px auto;
     padding: 10px 20px 10px 20px;
 }
+
+.main-title {
+    text-align: center;
+}
