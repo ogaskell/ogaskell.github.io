@@ -61,6 +61,15 @@ body {
     padding: 1px 20px;
     border-right: dotted black 3px;
 }
+#links {
+    vertical-align: top;
+}
+
+#links-table {
+    width: 100%;
+    text-align: center;
+}
+
 .page-footer {
     color: var(--colour-secondary-text);
 
