@@ -21,14 +21,24 @@ html {
 }
 
 body {
-    background-color: var(--colour-content-bg);
+    background-color: rgba(0,0,0,0);
     color: var(--colour-text);
 
     width: 70vw;
     max-width: 900px;
 
     margin: 10px auto 10px auto;
+    padding: 0;
+    /* border-radius: 5px;
+    box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4); */
+}
+
+.content-tile {
+    margin: 5px;
     padding: 10px 20px 10px 20px;
+
+    background-color: var(--colour-content-bg);
+    color: var(--colour-text);
     border-radius: 5px;
     box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4);
 }
@@ -145,8 +155,6 @@ body {
 
 .page-footer {
     color: var(--colour-secondary-text);
-
-    margin-top: 40px;
 
     text-align: center;
 }
