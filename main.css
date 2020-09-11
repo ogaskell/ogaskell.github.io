@@ -53,6 +53,14 @@ body {
     padding: 1px;
 }
 
+.main-content-section:last-child {
+    border-right: 0 none;
+}
+
+.main-content-section {
+    padding: 1px 20px;
+    border-right: dotted black 3px;
+}
 .page-footer {
     color: var(--colour-secondary-text);
 
