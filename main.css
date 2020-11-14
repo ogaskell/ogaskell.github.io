@@ -24,10 +24,10 @@ body {
     background-color: rgba(0,0,0,0);
     color: var(--colour-text);
 
-    width: 70vw;
-    max-width: 900px;
+    /*width: 70vw;
+    max-width: 900px;*/
 
-    margin: 10px auto 10px auto;
+    margin: 10px 30px 10px 30px;
     padding: 0;
     /* border-radius: 5px;
     box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4); */
@@ -93,22 +93,14 @@ body {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.tile-container {
-    /* float: left;
-    position: relative; */
+    grid-auto-flow: dense;
+    grid-gap: 4px;
 }
 
 .tile {
     border-radius: 5px;
     box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4);
     padding: 15px;
-    margin: 2px;
-
-    /*max-width: 100%;
-    width: 100%;*/
-    vertical-align: middle;
 }
 
 .tile h3 {
