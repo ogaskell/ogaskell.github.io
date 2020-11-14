@@ -33,25 +33,33 @@ body {
     box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4); */
 }
 
-.content-tile {
-    margin: 5px;
-    padding: 10px 20px 10px 20px;
-    display: block;
+/* Whole Page layout */
 
-    background-color: var(--colour-content-bg);
-    color: var(--colour-text);
-    border-radius: 5px;
-    box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4);
+.main-content-grid {
+    border-collapse: collapse;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'title title' 'main links' 'footer footer';
+    grid-template-columns: auto 120px;
 }
 
-.content-row {
-    float: left;
+.main-grid-item {
+        margin: 5px;
+        padding: 10px 20px 10px 20px;
+        display: block;
+
+        background-color: var(--colour-content-bg);
+        color: var(--colour-text);
+        border-radius: 5px;
+        box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4);
 }
 
-.content-row-break {
-    clear: both;
-}
+.title-area {grid-area: title;}
+.main-area {grid-area: main;}
+.links-area {grid-area: links;}
+.footer-area {grid-area: footer;}
 
+/* Title styles */
 .main-title {
     text-align: center;
     font-size: 3em;
@@ -80,43 +88,16 @@ body {
     font-size: 2.5em;
 }
 
-.title-underline {
-    border-top: dotted black 3px;
-    border-bottom: solid black 0px;
-    border-left: 0;
-    border-right: 0;
-    padding: 1px;
-}
-
-.main-content-table {
-    border-collapse: collapse;
-    height: 100%;
-}
-
-.main-content-row {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-
-.main-content-section {
-    padding: 0px;
-    height: 100%;
-}
-
-.main-content-section .content-tile {
-    height: calc(100% - 30px);
-}
-
+/* Tiles */
 .tile-grid {
     padding: 0;
-    float: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .tile-container {
-    display: block;
-    float: left;
-    position: relative;
+    /* float: left;
+    position: relative; */
 }
 
 .tile {
@@ -128,24 +109,6 @@ body {
     /*max-width: 100%;
     width: 100%;*/
     vertical-align: middle;
-}@media all and (max-width: 800px) {
-    .tile-container {
-        width: 100%;
-    }
-
-    #links {
-        max-width: 100px;
-    }
-}
-
-@media all and (min-width: 801px) {
-    .tile-container {
-        width: 50%;
-    }
-
-    #links {
-        width: 120px;
-    }
 }
 
 .tile h3 {
@@ -179,6 +142,7 @@ body {
     margin: 0;
 }
 
+/* Links */
 #links {
     vertical-align: top;
 }
@@ -193,6 +157,7 @@ body {
     margin: 5px 15px;
 }
 
+/* Footer */
 .page-footer {
     color: var(--colour-secondary-text);
 
