@@ -99,10 +99,15 @@ body {
 .tile {
     border-radius: 5px;
     box-shadow: 0 0px 8px 02px rgba(0, 0, 0, 0.4);
+
     padding: 15px;
+    margin: 2px;
+
     min-width: 300px;
-    width: 0;
+    height: auto;
+
     flex: 1;
+    flex-grow: 0;
 }
 
 .tile h3 {
