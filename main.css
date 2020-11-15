@@ -154,6 +154,7 @@ body {
 #links-list img {
     width: calc(100% - 30px);
     margin: 5px 15px;
+    border-radius: 50%;
 }
 
 /* Footer */
