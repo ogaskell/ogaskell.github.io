@@ -1,0 +1,48 @@
+:root { /* This is where I will define global variables, eg background, text colour etc. */
+    --colour-header-bg: #667eea;
+    --colour-content-bg: #cccccc;
+
+    --colour-text: #000;
+    --colour-secondary-text: #888;
+
+    --colour-link: #113;
+    --colour-secondary-link: #778;
+}
+
+html {
+    background-color: var(--colour-content-bg);
+    font-family: "Myriad Pro", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: calc(100% - 100px);
+    padding: 50px;
+    margin: 0;
+    background: linear-gradient(135deg, rgba(102,126,234,1) 0%, rgba(118,75,162,1) 100%);
+
+    text-align: center;
+    display: grid;
+
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.header h1 {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.tau {
+    font-size: 100px;
+    margin: 0 20px 0 0;
+    text-align: right !important;
+}
+
+.content {
+    padding: 5px 20px;
+}
