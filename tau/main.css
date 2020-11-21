@@ -1,6 +1,7 @@
 :root { /* This is where I will define global variables, eg background, text colour etc. */
     --colour-header-bg: #667eea;
     --colour-content-bg: #cccccc;
+    --colour-tile-bg: #ffffff;
 
     --colour-text: #000;
     --colour-secondary-text: #888;
@@ -46,5 +47,66 @@ body {
 }
 
 .content {
-    padding: 5px 20px;
+    padding: 0;
+    display: grid;
+}
+
+.tile {
+    display: grid;
+    grid-template: "header header-right" "subheader subheader-right" "gallery gallery" "footer footer";
+    align-items: baseline;
+
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--colour-tile-bg);
+    width: calc(100vw - 60px);
+}
+
+.tile-header {
+    grid-area: header;
+    font-size: 2.2em;
+}
+.tile-header-right {
+    grid-area: header-right;
+    text-align: right;
+}
+.tile-subheader {grid-area: subheader;}
+.tile-subheader-right {
+    grid-area: subheader-right;
+    text-align: right;
+}
+.tile-gallery {
+    grid-area: gallery;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 15px;
+}
+.tile-footer {
+    grid-area: footer;
+    padding: 20px 20px 10px 20px;
+}
+
+.tile-gallery-container {
+    height: 300px;
+    width: max-content;
+    position: relative;
+}
+
+.tile-gallery-container img:first-child {margin-left: 0 !important;}
+.tile-gallery-container img:last-child {margin-right: 0 !important;}
+
+.tile-gallery-container img {
+    height: 300px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin: 0 10px;
+}
+
+.learn-more {
+    background-color: rgba(102,126,234,1);
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 5px 15px;
 }
