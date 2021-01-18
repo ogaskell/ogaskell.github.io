@@ -181,3 +181,8 @@ body {
 .banner-column img {
     max-width: 30vw;
 }
+
+.secondlist {
+    list-style-type: square;
+    margin-left: -1em;
+}
