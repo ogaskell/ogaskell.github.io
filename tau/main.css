@@ -54,9 +54,13 @@ body {
     height: 1em;
 }
 
-.content {
+.container {
     padding: 0;
     display: grid;
+}
+
+.content {
+    padding: 10px;
 }
 
 .tile {
