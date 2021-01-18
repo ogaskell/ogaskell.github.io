@@ -12,7 +12,7 @@
 
 html {
     background-color: var(--colour-content-bg);
-    font-family: "Myriad Pro", sans-serif;
+    font-family: sans-serif;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 
 .header {
     width: calc(100% - 60px);
-    padding: 30px;
+    padding: 0 30px;
     margin: 0;
     background: linear-gradient(135deg, rgba(102,126,234,1) 0%, rgba(118,75,162,1) 100%);
 
@@ -33,6 +33,10 @@ body {
     align-items: center;
 
     font-size: 1.3em;
+}
+
+.headerlogo {
+    max-width: 30vw;
 }
 
 .header h1 {
