@@ -40,6 +40,11 @@ body {
     max-height: 150px;
 }
 
+.logolink {
+    padding: 0;
+    margin: 0;
+}
+
 .header h1 {
     vertical-align: middle;
     text-align: left;
