@@ -144,4 +144,17 @@ body {
     padding: 1px 10px;
     margin: 5px;
     border-radius: 10px;
+
+    display: grid;
+    grid-template-areas: "header header" "image mainarea" "footer footer";
+    grid-auto-flow: column;
 }
+
+.banner-title {grid-area: header;}
+.banner-right {grid-area: rightheader;}
+.banner-image {
+    grid-area: "image";
+    max-width: 30vw;
+}
+.banner-content {grid-area: mainarea;}
+.banner-footer {grid-area: footer;}
