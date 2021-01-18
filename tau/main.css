@@ -50,6 +50,10 @@ body {
     text-align: right !important;
 }
 
+.tauchar {
+    height: 1em;
+}
+
 .content {
     padding: 0;
     display: grid;
