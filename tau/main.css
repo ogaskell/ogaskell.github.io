@@ -144,6 +144,7 @@ body {
     padding: 1px 10px 10px 10px;
     margin: 5px;
     border-radius: 10px;
+    grid-gap: 10px;
 
     display: grid;
     grid-template-areas: "header header" "image mainarea" "footer footer";
@@ -158,6 +159,10 @@ body {
     max-width: 30vw;
 }
 .banner-content {
+    grid-area: mainarea;
+    display: block;
+}
+.banner-content-list {
     grid-area: mainarea;
     width: 100%;
 
