@@ -182,6 +182,29 @@ body {
     max-width: 30vw;
 }
 
+.banner-gallery {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "." ".";
+    margin: 5px;
+    padding: 0;
+    grid-gap: 10px;
+}
+
+@media (min-width: 800px) {
+  .banner-gallery {
+    grid-template-columns: 1fr 1.227fr;
+    grid-template-areas:
+      ". ."
+   }
+}
+
+.banner-gallery img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
 .secondlist {
     list-style-type: square;
     margin-left: -1em;
