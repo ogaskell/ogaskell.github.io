@@ -1,6 +1,6 @@
 :root { /* This is where I will define global variables, eg background, text colour etc. */
     --colour-header-bg: #667eea;
-    --colour-content-bg: #cccccc;
+    --colour-content-bg: #eeeeee;
     --colour-tile-bg: #ffffff;
 
     --colour-text: #000;
@@ -33,6 +33,9 @@ body {
     align-items: center;
 
     font-size: 1.3em;
+
+    position: sticky;
+    top: 0;
 }
 
 .headerlogo {
@@ -89,6 +92,7 @@ body {
     border-radius: 10px;
     background: var(--colour-tile-bg);
     width: calc(100vw - 60px);
+    box-shadow: 0 0 10px #333;
 }
 
 .tile-header {
@@ -141,8 +145,9 @@ body {
 
 .banner {
     background-color: white;
+    box-shadow: 0 0 10px #333;
     padding: 1px 10px 10px 10px;
-    margin: 5px;
+    margin: 20px 5px;
     border-radius: 10px;
     grid-gap: 10px;
 
@@ -188,7 +193,7 @@ body {
     grid-template-areas: "." ".";
     margin: 5px;
     padding: 0;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 @media (min-width: 800px) {
@@ -203,6 +208,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0 0 10px #333;
 }
 
 .secondlist {
