@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Image File Format Comparison</title>
+        <script src="modals.js"></script>
+        <link rel="stylesheet" type="text/css" href="modals.css">
+    </head>
+
+    <body>
+        <h1>Image File Format Comparison</h1>
+
+        <table cellspacing="0">
+            <tr>
+                <th colspan=3>File Format</th>
+                <th>File Size</th>
+                <th>Original Image</th>
+                <th>Zoomed In Image</th>
+                <th>Conclusions</th>
+            </tr>
+
+            <tr>
+                <td colspan=2>PNG</td>
+                <td>PNG (Portal Network Graphic) is a lossless file format, developed in 1997 as a replacement for GIF.
+                    It supports RGB, RGBA and Grayscale colour modes.</td>
+                <td>
+                    <p>99.7MB</p>
+                    <progress class="bad" value=99.7 max=99.7></progress>
+                </td>
+                <td><button class="expandable" id="png0">Image</button>
+                <td><button class="expandable" id="png1">Zoomed Image</button>
+                <td>PNG is an ideal format for Quality, since it preserves the original images exactly and has
+                    excellent compatibility on modern systems. However it has the largest file size on this list so it
+                    may not be good in cases where file size is important.</td>
+            </tr>
+
+            <tr>
+                <td colspan=2>TIFF</td>
+                <td>TIFF (Tag Image File Format) is a image container format, supporting lossy and lossless images,
+                    developed in 1986 by Adobe (then Aldus Corporation). It also supports many other advanced features
+                    such as layers and sub-files, and has many "extensions" which add more features, meaning
+                    compatibility is poor and files can be tricky to read.</td>
+                <td>
+                    <p>99.5MB</p>
+                    <progress class="bad" value=99.5 max=99.7></progress>
+                </td>
+                <td><button class="expandable" id="tif0">Image</button>
+                <td><button class="expandable" id="tif1">Zoomed Image</button>
+                <td>TIFF in this case does have excellent quality, and has a slightly lower file size than PNG.
+                    However, the difference isn't noticeable, and quality is identical, and since TIF doesn't work even
+                    in a lot of modern browsers, never mind older applications, means it's impossible to recommend.
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan=3>JPG</td>
+                <td>50% Quality</td>
+                <td rowspan=3>JPG is a very popular lossy file format, particularly for photography. Since it has a
+                    variable level of compression, it can be used for both high quality use cases and situations where
+                    getting the smallest filesize possible is most important. It was introduced in 1992 and has been
+                    the most widely used compression standard since.</td>
+                <td>
+                    <p>1.6MB</p>
+                    <progress class="good" value=1.6 max=20></progress>
+                </td>
+                <td><button class="expandable" id="jpg00">Image</button>
+                <td><button class="expandable" id="jpg01">Zoomed Image</button>
+                <td>JPEG with 50% quality looks fairly decent and would hold up just fine as long as quality is not
+                    being scrutinised. It also has a much lower file size that PNG or TIF, making it perfect for most
+                    websites where quality is not important.</td>
+            </tr>
+
+            <tr>
+                <td>25% Quality</td>
+            <td>
+                <p>1.2MB</p>
+                <progress class="good" value=1.2 max=20></progress>
+            </td>
+                <td><button class="expandable" id="jpg10">Image</button>
+                <td><button class="expandable" id="jpg11">Zoomed Image</button>
+                <td>At 25% quality, the image is noticably degraded and looks quite poor. This would make it unsuitable
+                    for anything but small images such as thumbnails, where the poor quality would be harder to notice.
+                    However it would be useful displayed any larger than this.</td>
+            </tr>
+
+            <tr>
+                <td>5% Quality</td>
+            <td>
+                <p>0.35MB</p>
+                <progress class="good" value=0.35 max=20></progress>
+            </td>
+                <td><button class="expandable" id="jpg20">Image</button>
+                <td><button class="expandable" id="jpg21">Zoomed Image</button>
+                <td>At 5% quality, the image looks awful. The colours are significantly reduced and the image barely
+                    resembles the original. The level of compression would be useless on anything but a very old system
+                    where small size if of paramount important, and while the filesize is tiny it's reaching the point
+                    of dimishining returns on modern systems as most modern internet connections could load even the
+                    50% quality JPEG in a matter of seconds.</td>
+            </tr>
+        </table>
+
+        <div id="modalpng0" class="modal">
+            <div class="modal-content">
+                <img src="png.png"> <span class="modal-close" id="closepng0">&times;</span>
+            </div>
+        </div>
+        <div id="modalpng1" class="modal">
+            <div class="modal-content">
+                <img src="pngzoom.png"> <span class="modal-close" id="closepng1">&times;</span>
+            </div>
+        </div>
+        <div id="modaltif0" class="modal">
+            <div class="modal-content">
+                <img src="tif.tif"> <span class="modal-close" id="closetif0">&times;</span>
+            </div>
+        </div>
+        <div id="modaltif1" class="modal">
+            <div class="modal-content">
+                <img src="tifzoom.png"> <span class="modal-close" id="closetif1">&times;</span>
+            </div>
+        </div>
+        <div id="modaljpg00" class="modal">
+            <div class="modal-content">
+                <img src="50.jpg"> <span class="modal-close" id="closejpg00">&times;</span>
+            </div>
+        </div>
+        <div id="modaljpg01" class="modal">
+            <div class="modal-content">
+                <img src="50zoom.png"> <span class="modal-close" id="closejpg01">&times;</span>
+            </div>
+        </div>
+        <div id="modaljpg10" class="modal">
+            <div class="modal-content">
+                <img src="25.jpg"> <span class="modal-close" id="closejpg10">&times;</span>
+            </div>
+        </div>
+        <div id="modaljpg11" class="modal">
+            <div class="modal-content">
+                <img src="25zoom.png"> <span class="modal-close" id="closejpg11">&times;</span>
+            </div>
+        </div>
+        <div id="modaljpg20" class="modal">
+            <div class="modal-content">
+                <img src="05.jpg"> <span class="modal-close" id="closejpg20">&times;</span>
+            </div>
+        </div>
+        <div id="modaljpg21" class="modal">
+            <div class="modal-content">
+                <img src="05zoom.png"> <span class="modal-close" id="closejpg21">&times;</span>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+
+html {
+    font-family: "Microsoft Sans Serif", "Segoe UI", sans-serif;
+}
+
+table {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    max-width: 30vw;
+}
+
+button {
+    padding: 3px;
+    color: black;
+    background-color: DeepSkyBlue;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #333 ;
+}
+
+button:hover {
+    border: 1px solid black;
+}
+
+.bad, .good {
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+.bad::-webkit-progress-bar,
+.good::-webkit-progress-bar { background: #ccc; }
+
+.bad::-moz-progress-bar { background: red; }
+.bad::-webkit-progress-value { background: red; }
+
+.good::-moz-progress-bar { background: green; }
+.good::-webkit-progress-value { background: green; }
+
+</style>
