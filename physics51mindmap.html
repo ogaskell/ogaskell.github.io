@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head><title>Thermal Physics Homework</title>
+<style type="text/css">
+.tooltip {
+  font-size:10pt;
+  background-color:#FFFFCC;
+  border:1px solid black;
+  padding:2px
+}
+</style>
+<style type="text/css">
+.tooltip {
+  position:absolute;
+  display:none
+}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+tooltip = null;
+document.onmousemove = updateTooltip;
+function updateTooltip(e) {
+try {
+if (document.all) {
+if (document.documentElement && document.documentElement.scrollTop) { // Explorer 6 Strict
+x = document.documentElement.scrollLeft + window.event.x;
+y = document.documentElement.scrollTop + window.event.y;
+}
+else { // all other Explorers
+x = document.body.scrollLeft + window.event.x;
+y = document.body.scrollTop + window.event.y;
+}
+}
+else {
+x = e.pageX;
+y = e.pageY;
+}
+if (tooltip != null) {
+o = 20;
+var sx, sy;
+if (self.pageYOffset) { // all except Explorer
+sx = self.pageXOffset;
+sy = self.pageYOffset;
+}
+else if (document.documentElement && document.documentElement.scrollTop) { // Explorer 6 Strict
+sx = document.documentElement.scrollLeft;
+sy = document.documentElement.scrollTop;
+}
+else if (document.body) { // all other Explorers
+sx = document.body.scrollLeft;
+sy = document.body.scrollTop;
+}
+t = y + o + tooltip.offsetHeight;
+w = sy + document.body.clientHeight;
+if (t > w) {
+y = y - o - tooltip.offsetHeight;
+}
+else {
+y = y + o;
+}
+t = x + o + tooltip.offsetWidth;
+w = sx + document.body.clientWidth;
+if (t > w) {
+x = x - o - tooltip.offsetWidth;
+}
+else {
+x = x + o;
+}
+if ((tooltip.style.top == '' || tooltip.style.top == 0) && (tooltip.style.left == '' || tooltip.style.left == 0))
+{
+tooltip.style.width = tooltip.offsetWidth + 'px';
+tooltip.style.height = tooltip.offsetHeight + 'px';
+}
+tooltip.style.left = x + "px";
+tooltip.style.top = y + "px";
+}
+} catch (error) { error = null; }
+}
+function showTooltip(id) {
+try {
+tooltip = document.getElementById(id);
+tooltip.style.display = "block";
+} catch (error) { error = null; }
+}
+function hideTooltip() {
+try {
+tooltip.style.display = "none";
+} catch (error) { error = null; }
+}
+</script>
+
+<div class="tooltip" id="n0">Thermal<br>Physics</div>
+<div class="tooltip" id="n1">1.Temperature</div>
+<div class="tooltip" id="n2">2. Solid, Liquid and Gas</div>
+<div class="tooltip" id="n3">3. Thermal Properties</div>
+<div class="tooltip" id="n4">4. Ideal Gases</div>
+<div class="tooltip" id="n5">The Ideal<br>Gas Equation</div>
+<div class="tooltip" id="n6">pV = nRT</div>
+<div class="tooltip" id="n7">pV = NkT</div>
+<div class="tooltip" id="n8">The Ideal Gas equation<br>relates pressure, volume,<br>amount of substance and<br>temperature for an ideal gas</div>
+<div class="tooltip" id="n9">p = pressure (Pa)<br>V = volume (m3)<br>n = number of moles<br>R = ideal gas const.<br>N = number of particles<br>k = Boltzmann const.<br>T = temperature</div>
+<div class="tooltip" id="n10">What is Temperature?</div>
+<div class="tooltip" id="n11">Temperature is the measure<br>of the average kinetic energy<br>of particles in a substance.</div>
+<div class="tooltip" id="n12">It also determines the <br>direction of thermal<br>energy transfer.</div>
+<div class="tooltip" id="n13">Thermal energy will move<br>from areas of high temperature<br>to areas of lower temperature.</div>
+<div class="tooltip" id="n14">Temperature Scales</div>
+<div class="tooltip" id="n15">There are 3 main scales<br>and units for temperature</div>
+<div class="tooltip" id="n16">Celcius</div>
+<div class="tooltip" id="n17">Celcius is the most widely<br>used temperature scale and<br>is part of the standard system<br>of units in most metric countries.<br><br>It is defined by the boiling point<br>of water (100°C) and it's melting<br>point (0°C)</div>
+<div class="tooltip" id="n18">Kelvin</div>
+<div class="tooltip" id="n19">Fahrenheit</div>
+<div class="tooltip" id="n20">The Kelvin scale is used<br>by the SI system of units,<br>and while it uses the same<br>increments as celcius (an <br>increase of 1°C = an increase<br>of 1K), 0 Kelvin is defined as <br>absolute zero, so 0K = 273°C.<br><br>This makes it an absolute scale,<br>like all other SI units</div>
+<div class="tooltip" id="n21">Fahrenheit is the imperial temperature<br>scale, and as such is mainly used in <br>North America. <br><br>It defines 0°F as the freezing point of <br>ammonium chloride brine, and 96°F<br>as the temperature of the human body.</div>
+<div class="tooltip" id="n22">The Kinetic Model</div>
+<div class="tooltip" id="n23">The Kinetic Model Decribes the<br>makeup of substances based on<br>atoms/molecules, and the different<br>ways they are arranged based on<br>their state.</div>
+<div class="tooltip" id="n24">Gas</div>
+<div class="tooltip" id="n25">Liquid</div>
+<div class="tooltip" id="n26">Solid</div>
+<div class="tooltip" id="n27">In a liquid, while the particles are<br>closely packed they are free to<br>move over each other within the<br>substance. This gives liquids their<br>viscosity, and creates surface tension<br>allowing them to form droplets among<br>other things.</div>
+<div class="tooltip" id="n28">In a solid, particles are closely packed<br>into a fixed lattice-like structure. While<br>this structure can depend on the substance,<br>with some substances forming different<br>lattices the concept is largely the same. The<br>particles also vibrate in place, giving the solid<br>its temperature</div>
+<div class="tooltip" id="n29">In a gas, particles are far apart<br>and have almost to intermolecular<br>forces, which also causes them to<br>be able to move around at high speed,<br>creating gas pressure. The spacing of<br>the particles also gives gases their<br>very low density and high volume.</div>
+<div class="tooltip" id="n30">Brownian Motion</div>
+<div class="tooltip" id="n31">Brownian Motion is the name given to the<br>phonomenon in which something suspended<br>in a fluid (liquid or gas) moves around seemingly<br>randomly, constantly changing direction. This<br>mainly occurs to very small, light particles eg pollen<br>or smoke particles.</div>
+<div class="tooltip" id="n32">This is caused by the constant collisions<br>with the particles of the fluid which are<br>constantly moving around in all directions.</div>
+<div class="tooltip" id="n33">The Kinetic Model also describes<br>why temperature cannot go below<br>0 Kelvin, or Absolute Zero.<br><br>At Absolute Zero, a substance has<br>no Kinetic Energy and as such the<br>pareticles will stop moving<br>completely, and the temperature<br>cannot be lowered any further.</div>
+<div class="tooltip" id="n34">Specific Heat Capacity</div>
+<div class="tooltip" id="n35">Specific Heat Capacity is the measure of<br>the amount of energy necessary to raise<br>the temperature of a certain mass of<br>substance by a certain amount. In the SI<br>system, this is 1kg by 1 Kelvin.</div>
+<div class="tooltip" id="n36">?E = mc?T</div>
+<div class="tooltip" id="n37">?T may be substituted for<br>?? if Celcius is used in<br>place of Kelvin.</div>
+<div class="tooltip" id="n38">?E - change in Energy (J)<br>m - mass (kg)<br>c - specific heat capactity (J kg?¹ K?¹)<br>?T - change in Temperature (K)</div>
+<div class="tooltip" id="n39">Specific Latent Heat</div>
+<div class="tooltip" id="n40">The specific latent heat of a<br>substance is the energy <br>required per kilogram of the<br>substance to change its state<br>without any change in <br>temperature.</div>
+<div class="tooltip" id="n41">Specific Latent Heat of Fusion<br>refers to the energy required<br>for a change from solid to liquid.</div>
+<div class="tooltip" id="n42">Specific Latent Heat of Vaporisation<br>refers to the energy required<br>for a change from solid to liquid.</div>
+<div class="tooltip" id="n43">E = mL</div>
+<div class="tooltip" id="n44">E - Energy required (J)<br>m - mass (kg)<br>c - specific latent heat (J kg?¹)</div>
+<div class="tooltip" id="n45">L can also be substituted for<br>Lf or Lv to refer specifically to<br>Spefic Latent Heat of Fusion<br>or Vaporisation, respectively</div>
+<div class="tooltip" id="n46">During a change of state, any energy<br>transferred to a substance is used by<br>the state change - hence the definition<br>states "without any change in<br>temperature". You can see this effect<br>when you plot temperature against time<br>for a state change - there will be a flat<br>region with no change while the substance<br>changes state.</div>
+<div class="tooltip" id="n47">An ideal gas is a way of describing<br>the behavior of a gas using a set of<br>laws and equations.</div>
+<div class="tooltip" id="n48">An Ideal Gas has no intermolecular forces,<br>and all collisions between molecules and<br>with surfaces are perfectly elastic.</div>
+<div class="tooltip" id="n49">This also means an ideal gas'<br>internal energy is made entirely<br>of its kinetic energy.</div>
+<div class="tooltip" id="n50">According to the ideal gas equation, as<br>long as the amount of substance and<br>temperature are constant, the pressure<br>multiplied by the volume is constant.</div>
+<div class="tooltip" id="n51">This means as volume<br>increases, pressure<br>decreases and vice versa.</div>
+<div class="tooltip" id="n52">However, as temperature or the amount<br>of substance increase, pressure and/or<br>volume must also increase.</div>
+<div class="tooltip" id="n53">These values are all connected<br>by a constant - usually the Ideal<br>Gas Constant, which is around 8.31.</div>
+<div class="tooltip" id="n54">When the number of particles<br>is used in place of the number of<br>moles, the Boltmann Constant<br>is used instead.</div>
+<div class="tooltip" id="n55">These relationships can also<br>be written as equations to eliminate<br>constant variables from the ideal gas<br>equation.</div>
+<div class="tooltip" id="n56">When temperature<br>and amount of<br>substance are constant</div>
+<div class="tooltip" id="n57">When only amount<br>of substance is<br>constant</div>
+<div class="tooltip" id="n58">P?V? = P?V?</div>
+<div class="tooltip" id="n59">P?V? / T? = P?V? / T?</div>
+
+<map name="image1_1">
+  <area shape="rect" coords="1040,783,1198,817" alt="" onmouseover="showTooltip('n59')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="958,708,1072,742" alt="" onmouseover="showTooltip('n58')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="942,858,1058,910" alt="" onmouseover="showTooltip('n57')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="762,765,900,817" alt="" onmouseover="showTooltip('n56')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="654,880,872,946" alt="" onmouseover="showTooltip('n55')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="265,1047,462,1115" alt="" onmouseover="showTooltip('n54')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="15,955,235,1010" alt="" onmouseover="showTooltip('n53')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="175,697,400,743" alt="" onmouseover="showTooltip('n52')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="15,799,170,845" alt="" onmouseover="showTooltip('n51')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="331,874,566,943" alt="" onmouseover="showTooltip('n50')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="401,451,579,502" alt="" onmouseover="showTooltip('n49')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="369,569,611,618" alt="" onmouseover="showTooltip('n48')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="477,732,679,792" alt="" onmouseover="showTooltip('n47')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="960,1218,1204,1358" alt="" onmouseover="showTooltip('n46')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="572,1075,748,1155" alt="" onmouseover="showTooltip('n45')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="707,1239,883,1299" alt="" onmouseover="showTooltip('n44')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="852,1076,935,1110" alt="" onmouseover="showTooltip('n43')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1282,1260,1498,1316" alt="" onmouseover="showTooltip('n42')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1416,1118,1604,1174" alt="" onmouseover="showTooltip('n41')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1146,1062,1326,1167" alt="" onmouseover="showTooltip('n40')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="923,985,1088,1024" alt="" onmouseover="showTooltip('n39')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1728,1136,1936,1214" alt="" onmouseover="showTooltip('n38')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1752,979,1898,1031" alt="" onmouseover="showTooltip('n37')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1579,1054,1693,1088" alt="" onmouseover="showTooltip('n36')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1411,830,1645,920" alt="" onmouseover="showTooltip('n35')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1384,985,1549,1024" alt="" onmouseover="showTooltip('n34')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1657,378,1863,524" alt="" onmouseover="showTooltip('n33')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1721,860,1971,918" alt="" onmouseover="showTooltip('n32')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1881,718,2161,824" alt="" onmouseover="showTooltip('n31')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1585,735,1750,774" alt="" onmouseover="showTooltip('n30')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="2190,652,2408,760" alt="" onmouseover="showTooltip('n29')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="2267,519,2525,627" alt="" onmouseover="showTooltip('n28')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="2189,386,2395,494" alt="" onmouseover="showTooltip('n27')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="2132,558,2202,588" alt="" onmouseover="showTooltip('n26')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="2002,458,2072,488" alt="" onmouseover="showTooltip('n25')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="2002,658,2072,688" alt="" onmouseover="showTooltip('n24')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1379,501,1585,593" alt="" onmouseover="showTooltip('n23')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1869,554,2034,593" alt="" onmouseover="showTooltip('n22')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1886,265,2118,393" alt="" onmouseover="showTooltip('n21')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1794,15,1982,179" alt="" onmouseover="showTooltip('n20')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1716,314,1786,344" alt="" onmouseover="showTooltip('n19')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1680,220,1750,250" alt="" onmouseover="showTooltip('n18')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1463,31,1659,163" alt="" onmouseover="showTooltip('n17')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1526,220,1596,250" alt="" onmouseover="showTooltip('n16')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1482,307,1640,351" alt="" onmouseover="showTooltip('n15')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1379,370,1544,409" alt="" onmouseover="showTooltip('n14')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1144,98,1328,148" alt="" onmouseover="showTooltip('n13')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1252,210,1382,260" alt="" onmouseover="showTooltip('n12')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1042,207,1214,263" alt="" onmouseover="showTooltip('n11')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1154,323,1318,362" alt="" onmouseover="showTooltip('n10')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="940,502,1072,618" alt="" onmouseover="showTooltip('n9')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="733,314,913,386" alt="" onmouseover="showTooltip('n8')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1012,422,1088,452" alt="" onmouseover="showTooltip('n7')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="959,341,1035,371" alt="" onmouseover="showTooltip('n6')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="768,477,878,516" alt="" onmouseover="showTooltip('n5')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="723,655,923,685" alt="" onmouseover="showTooltip('n4')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1136,860,1336,890" alt="" onmouseover="showTooltip('n3')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1550,655,1750,685" alt="" onmouseover="showTooltip('n2')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1136,450,1336,480" alt="" onmouseover="showTooltip('n1')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1163,630,1310,710" alt="" onmouseover="showTooltip('n0')" onmouseout="hideTooltip()"/>
+</map>
+
+
+    <table class="yimagetable" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td><img class="yimage" src="thermal%20phys1_1.png" usemap="#image1_1" border="0" alt=""/></td>
+      </tr>
+    </table>
+
+</body>
+</html>
